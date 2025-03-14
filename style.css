@@ -1,0 +1,19 @@
+h3{
+    color:chartreuse;
+}
+h4{
+    color:rgb(0, 255, 76);
+}
+#green{
+    color:rgba(5, 112, 37, 0.637);
+}
+.lime{
+    color:rgba(7, 163, 54, 0.637);
+}
+p,h2{
+    color:rgb(0, 255, 149);
+}
+*{
+    font-size:35px;
+    font-weight:500;
+}
