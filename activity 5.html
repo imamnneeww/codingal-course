@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Styling</title>
+<style>
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; /* Remove default body margins */
+  background: linear-gradient(to bottom right, #4CAF50, #8BC34A); /* Gradient background */
+  color: white; /* White text for contrast */
+  line-height: 1.6;
+  min-height: 100vh; /* Ensure page fills viewport height */
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  text-align: center;
+  max-width: 800px; /* Limit container width */
+}
+
+h1 {
+  color: #3f51b5; /* Material Design blue */
+  font-size: 3em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add a text shadow */
+}
+
+p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.highlight {
+  background-color: #ffeb3b; /* Yellow highlight */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.button {
+  background-color: #2196F3; /* Material Design blue */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+  background-color: #1976D2; /* Darker blue on hover */
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Welcome to CSS</h1>
+  <p>This example showcases more sophisticated CSS techniques to create a visually appealing layout. We use flexbox for easy centering, gradients for a dynamic background, and subtle shadows for depth.</p>
+  <p>Notice the use of a semi-transparent background for the container, rounded corners, and a hover effect on the button.  These details enhance the overall visual appeal.</p>
+  <p>The <span class="highlight">highlight</span> class provides a visually distinct way to emphasize text.</p>
+  <button class="button">Learn More</button>
+</div>
+
+</body>
+</html>
