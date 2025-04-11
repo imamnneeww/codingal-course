@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Positioning</title>
+<style>
+.container {
+  width: 300px;
+  height: 200px;
+  border: 1px solid black;
+  position: relative;
+}
+
+.relative {
+  position: relative;
+  top: 20px;
+  left: 30px;
+  background-color: lightblue;
+  padding: 10px;
+}
+
+.absolute {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: lightgreen;
+  padding: 10px;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: lightyellow;
+  padding: 10px;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: lightcoral;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="relative">Relative Position</div>
+  <div class="absolute">Absolute Position</div>
+</div>
+
+<div class="sticky">Sticky Position</div>
+
+<div class="fixed">Fixed Position</div>
+
+<p>Scroll down to see the effect of sticky and fixed positioning.</p>
+
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br>
+
+</body>
+</html>
