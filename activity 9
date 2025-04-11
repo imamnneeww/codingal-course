@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Box Model Example</title>
+<style>
+.container {
+  width: 300px;
+  height: 200px;
+  background-color: lightgray;
+  border: 10px solid darkgray;
+  padding: 20px;
+  margin: 50px auto; /* Center the container */
+  text-align: center; /* Center text within the container */
+}
+
+.inner-box {
+  width: 150px;
+  height: 100px;
+  background-color: lightblue;
+  border: 5px solid navy;
+  padding: 10px;
+  margin: 10px auto; /* Center the inner box */
+}
+
+.text {
+  font-size: 16px;
+  color: darkblue;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="inner-box">
+    <p class="text">This is some text inside the inner box.</p>
+  </div>
+  <p class="text">This text is in the container, outside the inner box.</p>
+</div>
+
+</body>
+</html>
