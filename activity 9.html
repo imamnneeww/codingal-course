@@ -3,6 +3,7 @@
 <head>
 <title>CSS Box Model Example</title>
 <style>
+<<<<<<< HEAD
 .container {
   width: 300px;
   height: 200px;
@@ -25,16 +26,72 @@
 .text {
   font-size: 16px;
   color: darkblue;
+=======
+body {
+  background-color: lime; /* Lime green background */
+  font-family: sans-serif; /* Improves readability */
+}
+
+.box-container {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  box-sizing: border-box;
+  margin: 10px;
+  transition: all 0.3s ease;
+}
+
+.box-1 {
+  background-color: #f06d06;
+  padding: 20px;
+  border: 5px solid #ffb347;
+  border-radius: 10px;
+}
+
+.box-2 {
+  background-color: #4682b4;
+  padding: 10px;
+  border: 10px double #6495ed;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.box-3 {
+  background-color: #90ee90;
+  padding: 30px;
+  border: 2px dashed #3cb371;
+  text-align: center;
+  line-height: 150px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+>>>>>>> 68313813e552a2eb37e3c49207326df2cffefcfe
 }
 </style>
 </head>
 <body>
 
+<<<<<<< HEAD
 <div class="container">
   <div class="inner-box">
     <p class="text">This is some text inside the inner box.</p>
   </div>
   <p class="text">This text is in the container, outside the inner box.</p>
+=======
+<div class="box-container">
+  <div class="box box-1">Box 1</div>
+  <div class="box box-2">Box 2</div>
+  <div class="box box-3">Box 3</div>
+>>>>>>> 68313813e552a2eb37e3c49207326df2cffefcfe
 </div>
 
 </body>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
 <title>Unequal Bootstrap Grid</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.41/css/bootstr">  <!-- Bootstrap CSS (replace with your local path if downloaded) -->
 </head>
@@ -18,5 +19,46 @@
 </div>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.41/css/bootstr"></script> <!-- Bootstrap JS (replace with your local path if downloaded) -->
+=======
+<title>Unequal Grid</title>
+<style>
+body {
+  font-family: sans-serif; /* Improves readability */
+}
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: limegreen; /* Light gray background */
+  padding: 20px; /* Add some padding around the grid */
+}
+
+.grid-item {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+.grid-item-large {
+  flex: 0 0 60%;
+  background-color: darkgreen;
+}
+
+.grid-item-small {
+  flex: 0 0 40%;
+  background-color: chartreuse;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="grid-item grid-item-large">Large Item 1</div>
+  <div class="grid-item grid-item-small">Small Item 1</div>
+  <div class="grid-item grid-item-large">Large Item 2</div>
+  <div class="grid-item grid-item-small">Small Item 2</div>
+</div>
+
+>>>>>>> 68313813e552a2eb37e3c49207326df2cffefcfe
 </body>
 </html>
