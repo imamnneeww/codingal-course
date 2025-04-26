@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Positioning Demo</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 40px;
+      background-color: green;
+    }
+    .section {
+      margin-bottom: 40px;
+      position: relative;
+      height: 120px;
+      border: 1px solid #9ddb4b;
+      padding: 10px;
+      background: #5eff00;
+    }
+    .box {
+      width: 120px;
+      height: 80px;
+      color: #88e023;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .static-box {
+      background: #21b947;
+      position: static;
+    }
+    .relative-box {
+      background: #0fe09b;
+      position: relative;
+      top: 10px;
+      left: 20px;
+    }
+    .absolute-box {
+      background: #7fff7f;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    .fixed-box {
+      background: #0bc46d;
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+      z-index: 999;
+    }
+    .sticky-wrapper {
+      height: 200px;
+      overflow: auto;
+      border: 1px dashed #2bca16;
+      padding: 10px;
+    }
+    .sticky-box {
+      background: #a9fa7a;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .scroll-content {
+      height: 400px;
+      background: repeating-linear-gradient(#93cc0d, #0eb95b 20px);
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Static Position</h2>
+  <div class="section">
+    <div class="box static-box">Static</div>
+  </div>
+
+  <h2>Relative Position</h2>
+  <div class="section">
+    <div class="box relative-box">Relative</div>
+  </div>
+
+  <h2>Absolute Position</h2>
+  <div class="section" style="position: relative;">
+    <div class="box absolute-box">Absolute</div>
+  </div>
+
+  <h2>Fixed Position</h2>
+  <div class="section">
+    <div class="box fixed-box">Fixed</div>
+  </div>
+
+  <h2>Sticky Position (Scroll to see)</h2>
+  <div class="sticky-wrapper">
+    <div class="box sticky-box">Sticky</div>
+    <div class="scroll-content"></div>
+  </div>
+
+</body>
+</html>

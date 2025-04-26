@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Carousel</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+      background: #3ba81a;
+    }
+    .carousel {
+      width: 300px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+    .carousel-slide {
+      min-width: 300px;
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+    .buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+    .buttons button {
+      background: rgba(255,255,255,0.7);
+      border: none;
+      padding: 8px 12px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="carousel">
+    <div class="carousel-track" id="track">
+      <div class="carousel-slide" style="background-image: url('pizzaface.png');"></div>
+      <div class="carousel-slide" style="background-image: url('snick.png');"></div>
+      <div class="carousel-slide" style="background-image: url('john ghost.png');"></div>
+      <div class="carousel-slide" style="background-image: url('fake pep.png');"></div>
+      <div class="carousel-slide" style="background-image: url('fake santa.png');"></div>
+      <div class="carousel-slide" style="background-image: url('captain pizza goblin.png');"></div>
+      <div class="carousel-slide" style="background-image: url('tomato monster.png');"></div>
+      <div class="carousel-slide" style="background-image: url('pizzamancer.png');"></div>
+    </div>
+    <div class="buttons">
+      <button id="prev">←</button>
+      <button id="next">→</button>
+    </div>
+  </div>
+
+  <script>
+    const track = document.getElementById('track');
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    let index = 0;
+
+    function updateSlide() {
+      track.style.transform = `translateX(-${index * 300}px)`;
+    }
+
+    nextBtn.onclick = () => {
+      index = (index + 1) % slides.length;
+      updateSlide();
+    };
+
+    prevBtn.onclick = () => {
+      index = (index - 1 + slides.length) % slides.length;
+      updateSlide();
+    };
+  </script>
+
+</body>
+</html>

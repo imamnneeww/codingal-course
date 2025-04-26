@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Use of Operators</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: #00ff8c; /* Light green background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    .card {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+      text-align: center;
+    }
+    h1, h2 {
+      margin: 10px 0;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Activity 4</h1>
+    <h2>Use of Operators</h2>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    // Numbers
+    let a = 10;
+    let b = 5;
+
+    // Operators
+    let addition = a + b;
+    let subtraction = a - b;
+    let multiplication = a * b;
+    let division = a / b;
+
+    // Display results
+    document.getElementById("result").innerHTML = `
+      Addition (10 + 5) = ${addition} <br>
+      Subtraction (10 - 5) = ${subtraction} <br>
+      Multiplication (10 * 5) = ${multiplication} <br>
+      Division (10 / 5) = ${division}
+    `;
+  </script>
+
+</body>
+</html>

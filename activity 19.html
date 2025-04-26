@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Functional Pagination</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      background-color: lime;
+    }
+    .pagination {
+      display: flex;
+      gap: 8px;
+      list-style: none;
+      padding: 0;
+    }
+    .pagination li {
+      display: inline;
+    }
+    .pagination a {
+      display: inline-block;
+      padding: 8px 12px;
+      text-decoration: none;
+      background-color: #60da30;
+      color: #8dc03b;
+      border-radius: 4px;
+      border: 1px solid #7bbe0f;
+      transition: background-color 0.3s ease;
+    }
+    .pagination a:hover {
+      background-color: #22df4b;
+    }
+    .pagination .active a {
+      background-color: #77f146;
+      color: rgb(58, 100, 74);
+      border-color: #007bff;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <ul class="pagination">
+    <li><a href="#" id="prev">&laquo;</a></li>
+    <li><a href="#" class="page-link" data-page="1">1</a></li>
+    <li><a href="#" class="page-link" data-page="2">2</a></li>
+    <li><a href="#" class="page-link" data-page="3">3</a></li>
+    <li><a href="#" class="page-link" data-page="4">4</a></li>
+    <li><a href="#" class="page-link" data-page="5">5</a></li>
+    <li><a href="#" id="next">&raquo;</a></li>
+  </ul>
+
+  <script>
+    let currentPage = 2; // Set the default active page
+
+    const pageLinks = document.querySelectorAll('.page-link');
+    const prevButton = document.getElementById('prev');
+    const nextButton = document.getElementById('next');
+
+    // Function to update active page
+    function updatePagination() {
+      pageLinks.forEach(link => {
+        const pageNum = parseInt(link.getAttribute('data-page'));
+        if (pageNum === currentPage) {
+          link.parentElement.classList.add('active');
+        } else {
+          link.parentElement.classList.remove('active');
+        }
+      });
+    }
+
+    // Event listeners for page navigation
+    pageLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        currentPage = parseInt(e.target.getAttribute('data-page'));
+        updatePagination();
+      });
+    });
+
+    // Previous page button
+    prevButton.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        updatePagination();
+      }
+    });
+
+    // Next page button
+    nextButton.addEventListener('click', () => {
+      if (currentPage < pageLinks.length) {
+        currentPage++;
+        updatePagination();
+      }
+    });
+
+    // Initialize pagination on page load
+    updatePagination();
+  </script>
+
+</body>
+</html>
