@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html>
 <head>
 <title>GIGA CHAD Customizable Calculator</title>
@@ -199,12 +200,182 @@ function calculate() {
   } catch {
     document.getElementById('display').value = 'Error';
   }
+=======
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainbow Theme Calculator</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  }
+
+  #calculator {
+    background-color: #2e7d32;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ff99;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: background-color 1s, box-shadow 1s;
+  }
+
+  #display {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 1.2em;
+    transition: color 1s;
+  }
+
+  button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #81C784;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 1s, color 1s;
+  }
+
+  .table-container {
+    margin-top: 20px;
+  }
+
+  table {
+    margin: 10px auto;
+    border-collapse: collapse;
+    width: 300px;
+    transition: border-color 1s;
+  }
+
+  th, td {
+    border: 2px solid #00ff99;
+    padding: 8px;
+    text-align: center;
+    transition: border-color 1s;
+  }
+
+  .theme-buttons {
+    margin-bottom: 20px;
+  }
+
+  .scientific-buttons {
+    display: none;
+  }
+
+  .scientific-mode #scientificButtons {
+    display: block;
+  }
+
+</style>
+</head>
+
+<body>
+
+<h1>🌈 Rainbow Calculator 🌈</h1>
+
+<div class="theme-buttons">
+  <button onclick="changeColor('green')">Green Theme</button>
+  <button onclick="changeColor('blue')">Blue Theme</button>
+  <button onclick="changeColor('red')">Red Theme</button>
+  <button onclick="changeColor('yellow')">Yellow Theme</button>
+  <button onclick="changeColor('pink')">Pink Theme</button>
+  <button onclick="changeColor('purple')">Purple Theme</button>
+  <button onclick="startRainbow()">🌈 Rainbow Mode</button>
+  <button onclick="toggleCalculatorMode()">Toggle Scientific Mode</button>
+</div>
+
+<div id="calculator">
+  <input type="text" id="display" disabled>
+  <br>
+  <div id="standardButtons">
+    <button onclick="appendToDisplay('1')">1</button>
+    <button onclick="appendToDisplay('2')">2</button>
+    <button onclick="appendToDisplay('3')">3</button>
+    <button onclick="appendToDisplay('+')">+</button>
+    <br>
+    <button onclick="appendToDisplay('4')">4</button>
+    <button onclick="appendToDisplay('5')">5</button>
+    <button onclick="appendToDisplay('6')">6</button>
+    <button onclick="appendToDisplay('-')">-</button>
+    <br>
+    <button onclick="appendToDisplay('7')">7</button>
+    <button onclick="appendToDisplay('8')">8</button>
+    <button onclick="appendToDisplay('9')">9</button>
+    <button onclick="appendToDisplay('*')">×</button>
+    <br>
+    <button onclick="appendToDisplay('0')">0</button>
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="calculate()">=</button>
+    <button onclick="appendToDisplay('/')">÷</button>
+  </div>
+
+  <div id="scientificButtons" class="scientific-buttons">
+    <button onclick="appendToDisplay('sin(')">sin</button>
+    <button onclick="appendToDisplay('cos(')">cos</button>
+    <button onclick="appendToDisplay('tan(')">tan</button>
+    <button onclick="appendToDisplay('sqrt(')">√</button>
+    <br>
+    <button onclick="appendToDisplay('pi')">π</button>
+    <button onclick="appendToDisplay('log(')">log</button>
+    <button onclick="appendToDisplay('exp(')">exp</button>
+    <button onclick="appendToDisplay('(')">(</button>
+    <br>
+    <button onclick="appendToDisplay(')')">)</button>
+  </div>
+</div>
+
+<div class="table-container">
+  <table id="additionTable">
+    <thead>
+      <tr><th>Addition Table</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  
+  <table id="subtractionTable">
+    <thead>
+      <tr><th>Subtraction Table</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <table id="multiplicationTable">
+    <thead>
+      <tr><th>Multiplication Table</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<script>
+let rainbowInterval;
+let scientificMode = false;
+
+function appendToDisplay(value) {
+  document.getElementById('display').value += value;
+>>>>>>> 4c4276d3ba38cbe104cd5967e58adea0935e2e21
 }
 
 function clearDisplay() {
   document.getElementById('display').value = '';
 }
 
+<<<<<<< HEAD
 function sqrt() {
   document.getElementById('display').value = Math.sqrt(eval(document.getElementById('display').value));
 }
@@ -274,10 +445,58 @@ function generateTable(type) {
     cell2.innerText = type === 'addition' ? `= ${i + i}` : type === 'subtraction' ? `= ${i - i}` : type === 'multiplication' ? `= ${i * i}` : `= ${i / i}`;
     row.appendChild(cell1);
     row.appendChild(cell2);
+=======
+function calculate() {
+  try {
+    const input = document.getElementById('display').value;
+    let result;
+    if (scientificMode) {
+      result = eval(input);
+    } else {
+      result = eval(input);
+    }
+    document.getElementById('display').value = result;
+  } catch {
+    document.getElementById('display').value = 'Error';
+  }
+}
+
+// Scientific Mode Toggle
+function toggleCalculatorMode() {
+  scientificMode = !scientificMode;
+  const calculator = document.getElementById('calculator');
+  calculator.classList.toggle('scientific-mode');
+}
+
+// Create tables
+createTable('additionTable', 'addition');
+createTable('subtractionTable', 'subtraction');
+createTable('multiplicationTable', 'multiplication');
+
+function createTable(tableId, type) {
+  const tableBody = document.getElementById(tableId).querySelector('tbody');
+  for (let i = 1; i <= 10; i++) {
+    const row = document.createElement('tr');
+    const cell1 = document.createElement('td');
+
+    switch (type) {
+      case 'addition':
+        cell1.textContent = `${i} + ${i} = ${i + i}`;
+        break;
+      case 'subtraction':
+        cell1.textContent = `${i * 2} - ${i} = ${i}`;
+        break;
+      case 'multiplication':
+        cell1.textContent = `${i} × ${i} = ${i * i}`;
+        break;
+    }
+    row.appendChild(cell1);
+>>>>>>> 4c4276d3ba38cbe104cd5967e58adea0935e2e21
     tableBody.appendChild(row);
   }
 }
 
+<<<<<<< HEAD
 // Change color scheme of the calculator
 function changeColor(color) {
   let calculator = document.getElementById('calculator');
@@ -309,12 +528,88 @@ function changeColor(color) {
   display.style.backgroundColor = '#333';
   display.style.color = selectedColor.text;
   
+=======
+function changeColor(color) {
+  clearInterval(rainbowInterval);
+
+  const calculator = document.getElementById('calculator');
+  const display = document.getElementById('display');
+  const buttons = document.querySelectorAll('button');
+  const tables = document.querySelectorAll('.table-container table, .table-container th, .table-container td');
+
+  const colors = {
+    green: { background: '#2e7d32', button: '#81C784', text: '#fff', glow: '#00ff99' },
+    blue: { background: '#1976D2', button: '#64B5F6', text: '#fff', glow: '#00aaff' },
+    red: { background: '#D32F2F', button: '#EF5350', text: '#fff', glow: '#ff4444' },
+    yellow: { background: '#FBC02D', button: '#FFF176', text: '#333', glow: '#ffee00' },
+    pink: { background: '#E91E63', button: '#F48FB1', text: '#fff', glow: '#ff66aa' },
+    purple: { background: '#7B1FA2', button: '#BA68C8', text: '#fff', glow: '#aa66ff' }
+  };
+
+  let selectedColor = colors[color];
+
+  calculator.style.backgroundColor = selectedColor.background;
+  calculator.style.boxShadow = `0 0 20px ${selectedColor.glow}`;
+  display.style.color = selectedColor.text;
+
+>>>>>>> 4c4276d3ba38cbe104cd5967e58adea0935e2e21
   buttons.forEach(button => {
     button.style.backgroundColor = selectedColor.button;
     button.style.color = selectedColor.text;
   });
+<<<<<<< HEAD
+=======
+
+  tables.forEach(table => {
+    table.style.borderColor = selectedColor.glow;
+  });
+}
+
+function startRainbow() {
+  clearInterval(rainbowInterval);
+  
+  const rainbowColors = [
+    { background: '#FF0000', button: '#FF6666', text: '#fff', glow: '#ff3333' }, // Red
+    { background: '#FF7F00', button: '#FFB366', text: '#fff', glow: '#ff9933' }, // Orange
+    { background: '#FFFF00', button: '#FFFF66', text: '#333', glow: '#ffee00' }, // Yellow
+    { background: '#00FF00', button: '#66FF66', text: '#333', glow: '#00ff33' }, // Green
+    { background: '#0000FF', button: '#6666FF', text: '#fff', glow: '#3333ff' }, // Blue
+    { background: '#4B0082', button: '#9966CC', text: '#fff', glow: '#660099' }, // Indigo
+    { background: '#8B00FF', button: '#B266FF', text: '#fff', glow: '#9933ff' }  // Violet
+  ];
+
+  let index = 0;
+
+  rainbowInterval = setInterval(() => {
+    const calculator = document.getElementById('calculator');
+    const display = document.getElementById('display');
+    const buttons = document.querySelectorAll('button');
+    const tables = document.querySelectorAll('.table-container table, .table-container th, .table-container td');
+
+    let color = rainbowColors[index];
+
+    calculator.style.backgroundColor = color.background;
+    calculator.style.boxShadow = `0 0 20px ${color.glow}`;
+    display.style.color = color.text;
+
+    buttons.forEach(button => {
+      button.style.backgroundColor = color.button;
+      button.style.color = color.text;
+    });
+
+    tables.forEach(table => {
+      table.style.borderColor = color.glow;
+    });
+
+    index = (index + 1) % rainbowColors.length;
+  }, 1500); // change color every 1.5 seconds
+>>>>>>> 4c4276d3ba38cbe104cd5967e58adea0935e2e21
 }
 </script>
 
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 4c4276d3ba38cbe104cd5967e58adea0935e2e21
