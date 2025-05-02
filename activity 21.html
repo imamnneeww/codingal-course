@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Multiplication Function</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+
+  h1 {
+    color: #333;
+  }
+
+  table {
+    width: 60%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+
+  th {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+  }
+
+  tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  tr:last-child td {
+    border-bottom: none;
+  }
+</style>
+</head>
+<body>
+
+<h1>Multiplication Results</h1>
+
+<table id="resultsTable">
+  <tr>
+    <th>Expression</th>
+    <th>Result</th>
+  </tr>
+</table>
+
+<script>
+// Function to perform multiplication
+function multiply(num1, num2) {
+  return num1 * num2;
+}
+
+// Function to add a row to the table
+function addResultRow(expression, result) {
+  const table = document.getElementById('resultsTable');
+  const row = table.insertRow();
+  const cell1 = row.insertCell(0);
+  const cell2 = row.insertCell(1);
+  cell1.innerHTML = expression;
+  cell2.innerHTML = result;
+}
+
+// Example calls and output
+addResultRow("5 × 3", multiply(5, 3));
+addResultRow("10 × 2", multiply(10, 2));
+addResultRow("7 × 0", multiply(7, 0));  // Multiplying by zero
+addResultRow("-4 × 5", multiply(-4, 5)); // Multiplying with negative number
+addResultRow("2.5 × 4", multiply(2.5, 4)); // Multiplying with floating-point numbers
+</script>
+
+</body>
+</html>
